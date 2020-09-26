@@ -5,5 +5,9 @@
  * @returns {number[]}
  */
 function filterRange(arr, a, b) {
-  // ваш код...
+  // return arr.filter(item => item >= a && item <= b); Костя, а где здесь ошибка подскажи???????
+  return arr.filter(function(item) {
+  if (item >= a && item <= b ) return item;
+});
 }
+

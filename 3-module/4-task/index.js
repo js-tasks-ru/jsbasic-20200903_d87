@@ -5,5 +5,16 @@
  * @returns {string}
  */
 function showSalary(users, age) {
-  // ваш код...
+  let ListOfWorkers = users.filter(function(userObj) {
+    if (userObj.age <= age) {
+      return true;
+    } else {
+      return false;
+    }
+  })
+  .map(function(userObj) {
+    return `${userObj.name}, ${userObj.balance}`;
+  }) ;
+  return ListOfWorkers.join(`\n`);
+
 }
